@@ -4,7 +4,6 @@ body{
     background-color: #dfdfd8;
     font-family: 'Roboto', sans-serif;
     padding: 0;
-    padding-bottom: 2000px;
     margin: 0;
 }
 
@@ -12,7 +11,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: #11151C;
 }
 
 .utility-bar--container{
@@ -61,6 +60,7 @@ nav a{
     text-decoration: none;
     color: #11151CBF;
     padding: 1.2rem;
+    letter-spacing: 1px;
 }
 
 nav a:hover{

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: futura;
+    src: url(../fonts/futura\ medium\ bt.ttf);
+}
+*{
+    font-family: futura;
+    letter-spacing: 3px;
+}
