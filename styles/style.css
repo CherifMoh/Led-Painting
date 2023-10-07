@@ -1,4 +1,3 @@
-
 main{
     padding-top: 36px;
     display: flex;
@@ -13,7 +12,13 @@ main{
     margin-top: 16px;
     display: grid;
     grid-template-columns: 245px 245px 245px 245px;
+    column-gap: 30px;
+}
+.product-card{
     text-decoration:none;
+}
+.product-card:hover .product-title{
+    text-decoration:underline;
 }
 .product-img{
     width: 245px;
