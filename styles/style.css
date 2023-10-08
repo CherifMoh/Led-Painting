@@ -16,9 +16,25 @@ main{
 }
 .product-card{
     text-decoration:none;
+    overflow: hidden;
 }
 .product-card:hover .product-title{
     text-decoration:underline;
+}
+.product-img-container{
+    border-radius: 8px;
+    overflow: hidden;
+}
+@keyframes scale {
+    from {transform:scale(1);}
+    to {transform:scale(1.2);}
+}
+.product-img-after-animation{
+    transform:scale(1.2)
+}
+.product-img-animation{
+    animation-name: scale;
+    animation-duration: 0.2s;
 }
 .product-img{
     width: 245px;
