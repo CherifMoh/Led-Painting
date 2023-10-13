@@ -4,13 +4,22 @@ products.forEach(product => {
     const html = `
     <a href="#" class="product-card">
         <div class="product-img-container">
-            <img src="assets/${product.image}" class="product-img js-product-img">
+        <img src="assets/${product.image}" class="product-img js-product-img">
         </div>
         <div class="card-info">
-            <span class="product-title">
-                ${product.title}
+        <span class="product-title">
+        ${product.title}
+        </span>
+        <span class="stars-container">
+            <img class="product-stars" src="assets/${product.stars}star.png">
+            (${product.starsCom})
+        </span> 
+            <span class="product-price">
+            from ${product.price}
             </span>
-            <span class="product-price">${product.price} DA</span>
+            <span class="sale-product-price">
+            To ${product.price} DA
+            </span>
         </div>
     </a>
     `
