@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+}
+header{
+    border-bottom: 1px solid rgb(221, 221, 221);
+    text-align: center;
+    height: 82px;
+}
+.logo{
+    height: 82px;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 800px;
+}
