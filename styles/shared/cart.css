@@ -58,6 +58,7 @@
     height: 100px;
     display: grid;
     grid-template-columns: 88px 1fr;
+    border-bottom: 1px solid rgb(221, 221, 221);
 }
 .cart-item-img-container{
     text-align: center;
@@ -117,4 +118,17 @@
 }
 .cart-item-saved{
     color: green;
+}
+.cart-checkout{
+    width: 394px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 23px;
+    right: 23px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    letter-spacing: 1px;
 }

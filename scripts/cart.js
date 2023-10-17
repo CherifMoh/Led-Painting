@@ -76,3 +76,13 @@ document.querySelectorAll('.cart-item-trash').forEach((deletBut)=>{
     })
 })}
 
+cart.forEach(cartItem=>{
+    products.forEach(product=>{
+        if(cartItem.id === product.id){
+            let totelPrice = Number(document.querySelector('.checkout-price').innerHTML)
+            totelPrice += product.salePrice*cartItem.quantity
+            console.log(totelPrice)
+            document.querySelector('.checkout-price').innerHTML = totelPrice
+        }
+    })
+})
