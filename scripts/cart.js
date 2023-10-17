@@ -8,7 +8,7 @@ products.forEach((product)=>{
             const html = `
             <div class="cart-item-container">
                 <div class="cart-item-img-container">
-                    <img src="assets/${product.image}" class="cart-item-img">
+                    <img src="assets/${product.imageOn}" class="cart-item-img">
                 </div>
                 <div class="cart-item-info-container">
                     <div class="cart-item-top-row">

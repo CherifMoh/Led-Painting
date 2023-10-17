@@ -7,7 +7,7 @@ const html =
 
 <section class="product-gallery">
 <div class="main-image-container">
-<img src="assets/${product.image}" class="main-image">
+<img src="assets/${product.imageOn}" class="main-image">
 </div>
         <div class="gallery-container"></div>
         </section>
@@ -66,4 +66,21 @@ addToCart.addEventListener('click',()=>{
         location.reload()        
 })
 
-
+const img = document.querySelector(`.main-image`)
+const on = product.imageOn
+const off = product.imageOff
+    img.addEventListener('mouseover',() => {
+        img.src=`assets/${on}`
+        img.classList.add('product-img-animation')
+        setTimeout(()=>{
+            img.classList.add('product-img-after-animation')
+        },200)
+    })
+    img.addEventListener('mouseleave',() => {
+        img.src=`assets/${off}`
+        img.classList.remove('product-img-animation')
+        img.classList.remove('product-img-after-animation')
+        setTimeout(()=>{
+            img.classList.remove('product-img-after-animation')
+        },200)
+    }) 

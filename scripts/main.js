@@ -4,7 +4,7 @@ products.forEach(product => {
     const html = `
     <a href="product.html" class="product-card" data-product-id=${product.id}>
         <div class="product-img-container">
-        <img src="assets/${product.image}" class="product-img js-product-img">
+        <img src="assets/${product.imageOff}" class="product-img js-product-img"  data-product-id=${product.id}>
         </div>
         <div class="card-info">
         <span class="product-title">
@@ -28,23 +28,27 @@ products.forEach(product => {
     
 })
 document.querySelectorAll(`.js-product-img`).forEach(img=>{
-    img.addEventListener('mouseover',() => {
-        img.src='assets/logo.jpg'
-        img.classList.add('product-img-animation')
-        setTimeout(()=>{
-            img.classList.add('product-img-after-animation')
-        },200)
-    })
     products.forEach(product =>{
-        img.addEventListener('mouseleave',() => {
-            img.src=`assets/${product.image}`
-            img.classList.remove('product-img-animation')
-            img.classList.remove('product-img-after-animation')
-            setTimeout(()=>{
+        if(img.dataset.productId === product.id){
+            const on = product.imageOn
+            const off = product.imageOff
+            
+            img.addEventListener('mouseover',() => {
+                img.src=`assets/${on}`
+                img.classList.add('product-img-animation')
+                setTimeout(()=>{
+                    img.classList.add('product-img-after-animation')
+                },200)
+            })
+            img.addEventListener('mouseleave',() => {
+                img.src=`assets/${off}`
+                img.classList.remove('product-img-animation')
                 img.classList.remove('product-img-after-animation')
-            },200)
-        })
-        
+                setTimeout(()=>{
+                    img.classList.remove('product-img-after-animation')
+                },200)
+            })
+        }
     })
 })
 document.querySelectorAll('.product-card').forEach((card)=>{

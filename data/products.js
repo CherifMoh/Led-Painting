@@ -1,20 +1,22 @@
 export const products = [
     {
-        id: 'f102dd26',
-        title: 'foo',
-        salePrice: 2500,
-        price: 3000,
-        starsCom:1, 
-        stars:4.5,
-        image:'photo-1573525526563-5f8a2375f2b7.jpg',
-    },{
         id: 'f5a7d872',
         title: 'Starry Encounter',
         salePrice: 2500,
         price: 3000,
         starsCom:1, 
         stars:4,
-        image:'photo-1573525526563-5f8a2375f2b7.jpg',
+        imageOn:'photo_2023-10-17_14-40-02.jpg',
+        imageOff:'photo_2023-10-17_14-40-07.jpg',
+    },{
+        id: 'f102dd26',
+        title: 'foo',
+        salePrice: 2500,
+        price: 3000,
+        starsCom:1, 
+        stars:4.5,
+        imageOn:'photo_2023-10-17_14-40-26.jpg',
+        imageOff:'photo_2023-10-17_14-40-29.jpg',
     },{
         id: 'f986bc6a',
         title: 'foo',
@@ -22,7 +24,8 @@ export const products = [
         price: 3000,
         starsCom:1,
         stars:3.5,
-        image:'photo-1573525526563-5f8a2375f2b7.jpg',
+        imageOn:'photo_2023-10-17_14-40-20.jpg',
+        imageOff:'photo_2023-10-17_14-40-24.jpg',
     },{
         id: 'ffa1dfe4',
         title: 'foo',
@@ -30,14 +33,7 @@ export const products = [
         price: 3000,
         starsCom:1,
         stars:5,
-        image:'photo-1573525526563-5f8a2375f2b7.jpg',
-    },{
-        id: 'ffa1dfe4',
-        title: 'foo',
-        salePrice: 2500,
-        price: 3000,
-        starsCom:1, 
-        stars:4,
-        image:'photo-1573525526563-5f8a2375f2b7.jpg',
-    },
+        imageOn:'photo_2023-10-17_14-40-14.jpg',
+        imageOff:'photo_2023-10-17_14-40-09.jpg',
+    }
 ];
