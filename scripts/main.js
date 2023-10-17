@@ -2,7 +2,7 @@ import {products} from '../data/products.js'
 
 products.forEach(product => {
     const html = `
-    <a href="#" class="product-card">
+    <a href="product.html" class="product-card" data-product-id=${product.id}>
         <div class="product-img-container">
         <img src="assets/${product.image}" class="product-img js-product-img">
         </div>
@@ -27,23 +27,32 @@ products.forEach(product => {
     
     
 })
-    document.querySelectorAll(`.js-product-img`).forEach(img=>{
-        img.addEventListener('mouseover',() => {
-            img.src='assets/logo.jpg'
-            img.classList.add('product-img-animation')
+document.querySelectorAll(`.js-product-img`).forEach(img=>{
+    img.addEventListener('mouseover',() => {
+        img.src='assets/logo.jpg'
+        img.classList.add('product-img-animation')
+        setTimeout(()=>{
+            img.classList.add('product-img-after-animation')
+        },200)
+    })
+    products.forEach(product =>{
+        img.addEventListener('mouseleave',() => {
+            img.src=`assets/${product.image}`
+            img.classList.remove('product-img-animation')
+            img.classList.remove('product-img-after-animation')
             setTimeout(()=>{
-                img.classList.add('product-img-after-animation')
+                img.classList.remove('product-img-after-animation')
             },200)
         })
-        products.forEach(product =>{
-            img.addEventListener('mouseleave',() => {
-                img.src=`assets/${product.image}`
-                img.classList.remove('product-img-animation')
-                img.classList.remove('product-img-after-animation')
-                setTimeout(()=>{
-                    img.classList.remove('product-img-after-animation')
-                },200)
-            })
-            
+        
+    })
+})
+document.querySelectorAll('.product-card').forEach((card)=>{
+    card.addEventListener('click', ()=>{
+        products.forEach((product)=>{
+            if(product.id === card.dataset.productId){
+                localStorage.setItem('selectedProduct' ,JSON.stringify(product))
+            }
         })
     })
+})
