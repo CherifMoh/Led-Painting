@@ -14,10 +14,23 @@
     </header>
     <main>
         <section class="form-section">
-            <h1>Delivery</h1>
-            <form method="post">
-
-            </form>
+            <div class="form-container">
+                <h1>Delivery</h1>
+                <form action="https://script.google.com/macros/s/AKfycbw0MBCdmM3Z718DAbDbumB_4XBFeHHGqMA_jKvkTXVts6b7tcfkO4PfjeJFTDK60agG/exec" method="post">
+                    <input placeholder="name" name="name" type="text">
+                    <input placeholder="phone" name="phone" type="text">
+                    <select name="wilaya" class="wilaya" >
+                        <option value="cherif">cherif</option>
+                    </select>
+                    <input placeholder="baldia" name="baldia" type="text">
+                    <select name="shippingmethod" class="shippingmethod" >
+                        <option value="بيت">طريقة التوصيل</option>
+                        <option value="بيت">بيت</option>
+                        <option value="مكتب">مكتب</option>
+                    </select>
+                    <button type="submit" class="submit-button">أطلب الان</button>
+                </form>
+            </div>
         </section>
         <section class="order-details-section"></section>
     </main>
