@@ -7,9 +7,13 @@ const html =
 
 <section class="product-gallery">
 <div class="main-image-container">
-<img src="assets/${product.imageOn}" class="main-image">
+<img src="assets/${product.imageOn}" class="main-image main-image-on">
+<img src="assets/${product.imageOff}" class="main-image main-image-off">
 </div>
-        <div class="gallery-container"></div>
+        <div class="gallery-container">
+            <img src="assets/${product.imageOff}" class="gallery-image">
+            <img src="assets/${product.imageOn}" class="gallery-image">
+        </div>
         </section>
         
         
@@ -66,21 +70,33 @@ addToCart.addEventListener('click',()=>{
         location.reload()        
 })
 
-const img = document.querySelector(`.main-image`)
-const on = product.imageOn
-const off = product.imageOff
-    img.addEventListener('mouseover',() => {
-        img.src=`assets/${on}`
-        img.classList.add('product-img-animation')
+
+function imgOffMouseover() {
+    document.querySelectorAll(`.main-image-off`).forEach(imgOff=>{
+        imgOff.classList.add('product-img-off-animation')
+        imgOff.classList.add('product-img-off-after-animation')
+    })  
+}
+function imgOffMouseleave() {
+    document.querySelectorAll(`.main-image-off`).forEach(imgOff=>{
+        imgOff.classList.remove('product-img-off-animation')
+        imgOff.classList.remove('product-img-off-after-animation')
         setTimeout(()=>{
-            img.classList.add('product-img-after-animation')
-        },200)
-    })
-    img.addEventListener('mouseleave',() => {
-        img.src=`assets/${off}`
-        img.classList.remove('product-img-animation')
-        img.classList.remove('product-img-after-animation')
-        setTimeout(()=>{
-            img.classList.remove('product-img-after-animation')
-        },200)
+            imgOff.classList.remove('product-img-off-after-animation')
+        },800)
     }) 
+}
+document.querySelectorAll(`.main-image-on`).forEach(imgOn=>{
+    imgOn.addEventListener('mouseover',() => {
+        imgOn.classList.add('no-opacity')
+        imgOffMouseover()
+    })
+    imgOn.addEventListener('mouseleave',() => {
+        imgOn.classList.remove('no-opacity')
+        imgOn.classList.add('product-img-on-animation')
+        setTimeout(()=>{
+            imgOn.classList.remove('product-img-on-animation')
+        },800)
+        imgOffMouseleave()
+    })
+})

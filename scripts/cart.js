@@ -64,8 +64,11 @@ function itemPlusButton(){
                             quantity.value = cartItem.quantity
                         }
                     })
+                    document.querySelector('.cart-button-quntity-number')
+                        .innerHTML =  cartQuantityNumber ()
                     document.querySelector('.cart-header-quntity')
                         .innerHTML =  `Cart • ${cartQuantityNumber ()}` 
+                    // tootalePrice()
                 })
             }
     })  })
@@ -82,8 +85,11 @@ function itemMinusButton(){
                             quantity.value = cartItem.quantity
                         }
                     }) 
+                    document.querySelector('.cart-button-quntity-number')
+                        .innerHTML =  cartQuantityNumber ()
                     document.querySelector('.cart-header-quntity')
                         .innerHTML =  `Cart • ${cartQuantityNumber ()}`
+                    // tootalePrice()
                 })
         }
     })})
@@ -103,16 +109,18 @@ document.querySelectorAll('.cart-item-trash').forEach((deletBut)=>{
         })
     })
 })
-cart.forEach(cartItem=>{
-    products.forEach(product=>{
-        if(cartItem.id === product.id){
-            let totelPrice = Number(document.querySelector('.checkout-price').innerHTML)
-            totelPrice += product.salePrice*cartItem.quantity
-            document.querySelector('.checkout-price').innerHTML = totelPrice
-        }
+function tootalePrice(){
+    cart.forEach(cartItem=>{
+        products.forEach(product=>{
+            if(cartItem.id === product.id){
+                let totelPrice = Number(document.querySelector('.checkout-price').innerHTML)
+                totelPrice += product.salePrice*cartItem.quantity
+                document.querySelector('.checkout-price').innerHTML = totelPrice
+            }
+        })
     })
-})
-
+}
+tootalePrice()
 function cartQuantityNumber (){
     let Quantity = 0 ;
     cart.forEach(cartItem=>{

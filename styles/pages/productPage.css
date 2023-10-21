@@ -78,3 +78,48 @@ main{
 .Add-to-cart:hover{
     border-width: 2px;
 }
+.main-image-container{
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.main-image-off{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+@keyframes scale {
+    from {transform:scale(1);}
+    to {transform:scale(1.08);}
+}
+@keyframes opacity {
+    from {opacity:0 ;}
+    to {opacity:1 ;}
+}
+.product-img-off-after-animation{
+    transform:scale(1.08)
+}
+.product-img-off-animation{
+    animation-name: scale;
+    animation-duration: 0.8s;
+}
+.product-img-on-after-animation{
+    opacity: 1;
+}
+.product-img-on-animation{
+    animation-name: opacity;
+    animation-duration: 0.4s;
+}
+.no-opacity{
+    opacity: 0;
+}
+.gallery-container{
+    margin-top: 30px;
+}
+.gallery-image{
+    cursor: pointer;
+    border-radius: 8px;
+    width: 110px;
+    height: 110px;
+}

@@ -108,6 +108,10 @@ main{
     }
     .main-container{
         padding: 50px;
+        padding-top: 0;
+    }
+    main{
+        padding-top: 0;
     }
 }
 @media (max-width: 750px) {

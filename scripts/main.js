@@ -66,3 +66,16 @@ document.querySelectorAll('.product-card').forEach((card)=>{
         })
     })
 })
+
+
+document.querySelector('.burger-button').addEventListener('click',()=>{
+    if(document.querySelector('.side-menu').classList.contains('trasform')){
+        document.querySelector('.side-menu').classList.remove('trasform')
+        document.querySelector('.side-menu-shadow').classList.remove('display')
+        document.querySelector('body').classList.remove('stopescrol')
+    }else{
+        document.querySelector('.side-menu').classList.add('trasform')
+        document.querySelector('.side-menu-shadow').classList.add('display')
+        document.querySelector('body').classList.add('stopescrol')
+    }
+})
