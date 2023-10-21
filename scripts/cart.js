@@ -17,9 +17,9 @@ products.forEach((product)=>{
                     </div>
                     <div class="cart-item-lower-row">
                         <div class="cart-item-quantity-container">
-                            <button class="cart-item-minus-button">-</button>
-                            <input class="cart-item-quantity-input" min="1" value="${cartItem.quantity}" type="text" >
-                            <button class="cart-item-plus-button">+</button>
+                            <button class="cart-item-minus-button" data-product-id=${cartItem.id}>-</button>
+                            <input class="cart-item-quantity-input" data-product-id=${cartItem.id} min="1" value="${cartItem.quantity}" type="text" >
+                            <button class="cart-item-plus-button" data-product-id=${cartItem.id}>+</button>
                         </div>
                         <div class="cart-item-price-container">
                             <div class="cart-item-price">
@@ -40,7 +40,6 @@ products.forEach((product)=>{
 
 document.querySelector('.cart-button-container')
 .addEventListener('click',()=>{
-        console.log('cherif')
     document.querySelector('.cart-container')
         .classList.add('translatx','box-shadow')
     document.querySelector('body').classList.add('stop-scrolling')
@@ -53,16 +52,45 @@ document.querySelector('.cart-off')
     document.querySelector('body').classList.remove('stop-scrolling')
 })
 
-const quantity = document.querySelector('.cart-item-quantity-input')
-if(document.querySelector('.cart-item-plus-button')){
-    document.querySelector('.cart-item-plus-button')
-    .addEventListener('click', ()=>{
-        quantity.value -= -1
-    })
-document.querySelector('.cart-item-minus-button')
-    .addEventListener('click', ()=>{
-        quantity.value < 2 ? '' :quantity.value -= 1
-    })
+function itemPlusButton(){
+    document.querySelectorAll('.cart-item-plus-button').forEach((plusBut)=>{
+        cart.forEach((cartItem)=>{
+            if(cartItem.id === plusBut.dataset.productId ){
+                plusBut.addEventListener('click',()=>{
+                    cartItem.quantity =Number(cartItem.quantity)+1
+                    localStorage.setItem('cart', JSON.stringify(cart)) 
+                    document.querySelectorAll('.cart-item-quantity-input').forEach((quantity)=>{
+                        if(quantity.dataset.productId === cartItem.id){
+                            quantity.value = cartItem.quantity
+                        }
+                    })
+                    document.querySelector('.cart-header-quntity')
+                        .innerHTML =  `Cart • ${cartQuantityNumber ()}` 
+                })
+            }
+    })  })
+}
+function itemMinusButton(){
+    document.querySelectorAll('.cart-item-minus-button').forEach((minusBut)=>{
+        cart.forEach((cartItem)=>{
+            if(cartItem.id === minusBut.dataset.productId ){
+                minusBut.addEventListener('click',()=>{
+                    cartItem.quantity =Number(cartItem.quantity)-1
+                    localStorage.setItem('cart', JSON.stringify(cart)) 
+                    document.querySelectorAll('.cart-item-quantity-input').forEach((quantity)=>{
+                        if(quantity.dataset.productId === cartItem.id){
+                            quantity.value = cartItem.quantity
+                        }
+                    }) 
+                    document.querySelector('.cart-header-quntity')
+                        .innerHTML =  `Cart • ${cartQuantityNumber ()}`
+                })
+        }
+    })})
+}
+itemMinusButton()
+itemPlusButton()
+
 
 document.querySelectorAll('.cart-item-trash').forEach((deletBut)=>{
     deletBut.addEventListener('click',()=>{
@@ -74,15 +102,27 @@ document.querySelectorAll('.cart-item-trash').forEach((deletBut)=>{
             }
         })
     })
-})}
-
+})
 cart.forEach(cartItem=>{
     products.forEach(product=>{
         if(cartItem.id === product.id){
             let totelPrice = Number(document.querySelector('.checkout-price').innerHTML)
             totelPrice += product.salePrice*cartItem.quantity
-            console.log(totelPrice)
             document.querySelector('.checkout-price').innerHTML = totelPrice
         }
     })
 })
+
+function cartQuantityNumber (){
+    let Quantity = 0 ;
+    cart.forEach(cartItem=>{
+        Quantity += Number(cartItem.quantity)
+    })
+    return Quantity
+}
+if(cartQuantityNumber ()){
+document.querySelector('.cart-button-quntity-number')
+    .innerHTML =  cartQuantityNumber ()
+document.querySelector('.cart-header-quntity')
+    .innerHTML =  `Cart • ${cartQuantityNumber ()}`
+}

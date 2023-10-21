@@ -4,7 +4,8 @@ products.forEach(product => {
     const html = `
     <a href="product.html" class="product-card" data-product-id=${product.id}>
         <div class="product-img-container">
-        <img src="assets/${product.imageOff}" class="product-img js-product-img"  data-product-id=${product.id}>
+        <img src="assets/${product.imageOn}" class="product-img js-product-img-on"  data-product-id=${product.id}>
+        <img src="assets/${product.imageOff}" class="product-img product-img2 js-product-img-off"  data-product-id=${product.id}>
         </div>
         <div class="card-info">
         <span class="product-title">
@@ -27,28 +28,33 @@ products.forEach(product => {
     
     
 })
-document.querySelectorAll(`.js-product-img`).forEach(img=>{
-    products.forEach(product =>{
-        if(img.dataset.productId === product.id){
-            const on = product.imageOn
-            const off = product.imageOff
-            
-            img.addEventListener('mouseover',() => {
-                img.src=`assets/${on}`
-                img.classList.add('product-img-animation')
-                setTimeout(()=>{
-                    img.classList.add('product-img-after-animation')
-                },200)
-            })
-            img.addEventListener('mouseleave',() => {
-                img.src=`assets/${off}`
-                img.classList.remove('product-img-animation')
-                img.classList.remove('product-img-after-animation')
-                setTimeout(()=>{
-                    img.classList.remove('product-img-after-animation')
-                },200)
-            })
-        }
+function imgOffMouseover() {
+    document.querySelectorAll(`.js-product-img-off`).forEach(imgOff=>{
+        imgOff.classList.add('product-img-off-animation')
+        imgOff.classList.add('product-img-off-after-animation')
+    })  
+}
+function imgOffMouseleave() {
+    document.querySelectorAll(`.js-product-img-off`).forEach(imgOff=>{
+        imgOff.classList.remove('product-img-off-animation')
+        imgOff.classList.remove('product-img-off-after-animation')
+        setTimeout(()=>{
+            imgOff.classList.remove('product-img-off-after-animation')
+        },800)
+    }) 
+}
+document.querySelectorAll(`.js-product-img-on`).forEach(imgOn=>{
+    imgOn.addEventListener('mouseover',() => {
+        imgOn.classList.add('no-opacity')
+        imgOffMouseover()
+    })
+    imgOn.addEventListener('mouseleave',() => {
+        imgOn.classList.remove('no-opacity')
+        imgOn.classList.add('product-img-on-animation')
+        setTimeout(()=>{
+            imgOn.classList.remove('product-img-on-animation')
+        },800)
+        imgOffMouseleave()
     })
 })
 document.querySelectorAll('.product-card').forEach((card)=>{

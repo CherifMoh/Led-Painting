@@ -6,8 +6,7 @@ footer{
     margin-top: 160px;
 }
 .footer-container{
-    height: 209px;
-    margin: 0 350px;
+    margin: 0 1rem;
     padding: 0 50px 50px;
     display: flex;
     justify-content: center;
@@ -24,7 +23,12 @@ footer{
 .footer-header ul{
     margin: 0;
 }
+.footer-header ul li{
+    list-style-type:disc ;
+    display: inline;
+}
 .footer-header ul a{
+    list-style-type:none ;
     text-decoration: none;
     color: #ffffffbf;
     margin-left: 15px;
@@ -47,4 +51,26 @@ footer{
     margin: 0px;
     margin-bottom: 20px;
     margin-top: 40px;
+}
+
+@media (max-width:880px) {
+    .footer-container{
+        padding: 0;
+    }
+    .footer-header{
+        justify-self: start;
+        text-align: start;
+    }
+    .footer-header ul{
+        line-height: 60px;
+        padding: 0px;
+    }
+    .footer-header ul a{
+        margin: 0;
+        display: block;
+    }   
+    .footer-header ul li{
+        margin: 20px;
+        display: list-item;
+    }   
 }
