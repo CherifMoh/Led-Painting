@@ -16,7 +16,7 @@ products.forEach(product => {
             (${product.starsCom})
         </span> 
             <span class="product-price">
-            from ${product.price}
+            from ${product.salePrice}
             </span>
             <span class="sale-product-price">
             To ${product.price} DA

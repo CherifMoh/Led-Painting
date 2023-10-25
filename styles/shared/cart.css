@@ -87,6 +87,7 @@
     grid-template-rows: 1fr 1fr;
 }
 .cart-item-top-row{
+    height: 30px;
     margin-top: 5px;
     display: flex;
     align-items: start;
@@ -96,11 +97,13 @@
     cursor: pointer;
 }
 .cart-item-lower-row{
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .cart-item-quantity-container{
+    height: 35px;
     border: 1px solid rgb(221, 221, 221);
     width: 105px;
 }

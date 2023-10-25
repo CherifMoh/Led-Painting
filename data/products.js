@@ -11,7 +11,7 @@ export const products = [
     },{
         id: 'f102dd26',
         title: 'foo',
-        salePrice: 2500,
+        salePrice: 2700,
         price: 3000,
         starsCom:1, 
         stars:4.5,
@@ -20,7 +20,7 @@ export const products = [
     },{
         id: 'f986bc6a',
         title: 'foo',
-        salePrice: 2500,
+        salePrice: 2700,
         price: 3000,
         starsCom:1,
         stars:3.5,
@@ -29,7 +29,7 @@ export const products = [
     },{
         id: 'ffa1dfe4',
         title: 'foo',
-        salePrice: 2500,
+        salePrice: 2700,
         price: 3000,
         starsCom:1,
         stars:5,
