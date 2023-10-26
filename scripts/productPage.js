@@ -72,10 +72,10 @@ addToCart.addEventListener('click',()=>{
 
 
 function imgOffMouseover() {
-    document.querySelectorAll(`.main-image-off`).forEach(imgOff=>{
-        imgOff.classList.add('product-img-off-animation')
-        imgOff.classList.add('product-img-off-after-animation')
-    })  
+    // document.querySelectorAll(`.main-image-off`).forEach(imgOff=>{
+    //     imgOff.classList.add('product-img-off-animation')
+    //     imgOff.classList.add('product-img-off-after-animation')
+    // })  
 }
 function imgOffMouseleave() {
     document.querySelectorAll(`.main-image-off`).forEach(imgOff=>{

@@ -12,6 +12,7 @@ header{
 main{
     display: grid;
     grid-template-columns: 1fr 855px;
+    height: 0;
 }
 .form-section{
     height: 100%;
@@ -95,9 +96,31 @@ input,select{
     padding-left: 14px;
     width: 215px;
 }
-.product-price{
+.product-price,.products-price{
     letter-spacing: normal;
     text-align: end;
     padding-left: 14px;
     width: 215px;
+}
+.order-price-cintainer{
+    margin-top:50px;
+
+}
+.prcie-c{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:10px;
+}
+
+.nospasing{
+    letter-spacing: normal;
+    font-size: 14px;
+    color: #000000; 
+}
+.total-price,.total-text{
+    letter-spacing: normal;
+    font-size: 17px;
+    color: #000000;
+    font-weight: 500;
 }
