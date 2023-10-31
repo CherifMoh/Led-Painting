@@ -24,9 +24,10 @@ products.forEach(product => {
         </div>
     </a>
     `
-    document.querySelector('.product-grid').innerHTML += html
+    document.querySelector('.product-grid').innerHTML += html  
+
     
-    
+                
 })
 function imgOffMouseover() {
     document.querySelectorAll(`.js-product-img-off`).forEach(imgOff=>{

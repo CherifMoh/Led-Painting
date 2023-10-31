@@ -1,4 +1,10 @@
-import {cart} from './cart.js'
+import {cart, cartShow} from './cart.js'
+
+
+if(localStorage.getItem('reloded')){
+    localStorage.removeItem('reloded')
+    cartShow()
+}
 
 const product = JSON.parse(localStorage.getItem('selectedProduct'))
 const html =
@@ -36,6 +42,8 @@ const html =
     `
 document.querySelector('.main-section').innerHTML = html
 
+
+
 const quantity = document.querySelector('.quantity-input')
 
 document.querySelector('.plus-quantity-button')
@@ -67,6 +75,7 @@ addToCart.addEventListener('click',()=>{
         });
         localStorage.setItem('cart', JSON.stringify(cart))  
         }
+        localStorage.setItem('reloded', 'reloded')
         location.reload()        
 })
 

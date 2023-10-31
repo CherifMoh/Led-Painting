@@ -36,4 +36,14 @@ export const products = [
         imageOn:'photo_2023-10-17_14-40-14.jpg',
         imageOff:'photo_2023-10-17_14-40-09.jpg',
     }
+    ,{
+        id: 'ffa1dfe4',
+        title: 'foo',
+        salePrice: 2700,
+        price: 3000,
+        starsCom:1,
+        stars:5,
+        imageOn:'photo_2023-10-17_14-40-14.jpg',
+        imageOff:'photo_2023-10-17_14-40-09.jpg',
+    }
 ];

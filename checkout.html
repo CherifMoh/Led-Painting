@@ -23,31 +23,40 @@
         <a href="checkout.html"><button class="cart-checkout">Checkout • <span class="checkout-price"></span>DA</button></a>
     </div>
     <header>
-        <a href="index.html" class="logo-container"><img src="assets/logo.jpg" class="logo"></a>
+        <a href="index.html" class="logo-container"><img src="assets/logo.png" class="logo"></a>
     </header>
     <main>
         
         <section class="form-section">
             <div class="form-container">
                 <h1>Delivery</h1>
-                <form action="https://script.google.com/macros/s/AKfycbw0MBCdmM3Z718DAbDbumB_4XBFeHHGqMA_jKvkTXVts6b7tcfkO4PfjeJFTDK60agG/exec" method="post">
+                <form action="https://script.google.com/macros/s/AKfycbyT5Hbvt4dTaZswrrdqPyJBISB6Uz3R2iD3iRzoR2DXCx5ONd4RK-WFSdU-aDY9bwAR/exec" method="post">
                     <input placeholder="name" name="name" type="text">
                     <input placeholder="phone" name="phone" type="text">
                     <select name="wilaya" class="wilaya" >
+                        <option selected hidden >الولاية</option>
+                        <option value="cherif">cherif</option>
                         <option value="cherif">cherif</option>
                     </select>
                     <input placeholder="baldia" name="baldia" type="text">
                     <select name="shippingmethod" class="shippingmethod" >
-                        <option value="بيت">طريقة التوصيل</option>
+                        <option selected hidden >طريقة التوصيل</option>
                         <option value="بيت">بيت</option>
                         <option value="مكتب">مكتب</option>
                     </select>
+                    <div class="hidden-inputs">
+                       
+                        <input name="totalPrice" id="totalPrice" type="hidden">
+                    </div>
+                    
                     <button type="submit" class="submit-button">أطلب الان</button>
                 </form>
             </div>
         </section>
         <section class="order-details-section">
             <div class="order-details-container">
+                <div class="order-summary-title">Order Summary</div>
+
                 <div class="product-items-container">
                 </div>
     

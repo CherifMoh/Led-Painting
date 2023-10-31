@@ -18,6 +18,7 @@ main{
 .product-card{
     text-decoration:none;
     overflow: hidden;
+    animation: slideUp 1s ease-out ;
 }
 .product-card:hover .product-title{
     text-decoration:underline;
