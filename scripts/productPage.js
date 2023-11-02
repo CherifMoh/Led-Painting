@@ -4,6 +4,7 @@ import {cart, cartShow} from './cart.js'
 if(localStorage.getItem('reloded')){
     localStorage.removeItem('reloded')
     cartShow()
+
 }
 
 const product = JSON.parse(localStorage.getItem('selectedProduct'))
@@ -24,19 +25,19 @@ const html =
         
         
         <section class="product-info">
-        <div class="product-title">${product.title}</div>
-        <div class="price-container">
-        <span class="price-befor-sale">${product.price} DA</span>
-        <span class="price-after-sale">${product.salePrice} DA</span>
+        <div class="product-title spawn-anime">${product.title}</div>
+        <div class="price-container spawn-anime">
+        <span class="price-befor-sale ">${product.price} DA</span>
+        <span class="price-after-sale ">${product.salePrice} DA</span>
         <span class="sale-mark">Sale</span>
         </div>
-        <p>Quantity</p>
-        <div class="quantity-container">
+        <p class="spawn-anime">Quantity</p>
+        <div class="quantity-container spawn-anime">
         <button class="minus-quantity-button">-</button>
         <input value="1" min="1" class="quantity-input" type="text">
         <button class="plus-quantity-button">+</button>
         </div>
-        <button class="Add-to-cart" data-product-id=${product.id}>Add to cart</button>
+        <button class="Add-to-cart spawn-anime" data-product-id=${product.id}>Add to cart</button>
         </section>
         </section>
     `

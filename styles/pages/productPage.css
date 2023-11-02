@@ -16,6 +16,9 @@ main{
 .product-info{
     margin-left: 50px;
 }
+.spawn-anime{
+    animation: slideUp 0.5s ease-out ;
+}
 .product-title{
     font-size: 52px;
     color: #11151C;
