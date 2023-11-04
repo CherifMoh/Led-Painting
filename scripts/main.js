@@ -44,7 +44,8 @@ function imgOffMouseleave() {
         },800)
     }) 
 }
-document.querySelectorAll(`.js-product-img-on`).forEach(imgOn=>{
+export function productCardAnime(){
+    document.querySelectorAll(`.js-product-img-on`).forEach(imgOn=>{
     imgOn.addEventListener('mouseover',() => {
         imgOn.classList.add('no-opacity')
         imgOffMouseover()
@@ -57,7 +58,8 @@ document.querySelectorAll(`.js-product-img-on`).forEach(imgOn=>{
         },800)
         imgOffMouseleave()
     })
-})
+})}
+productCardAnime()
 document.querySelectorAll('.product-card').forEach((card)=>{
     card.addEventListener('click', ()=>{
         products.forEach((product)=>{
@@ -67,6 +69,8 @@ document.querySelectorAll('.product-card').forEach((card)=>{
         })
     })
 })
+
+
 
 
 document.querySelector('.burger-button').addEventListener('click',()=>{

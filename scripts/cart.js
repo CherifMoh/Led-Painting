@@ -227,3 +227,8 @@ function footer(){
 }
 setInterval(footer,0)
 // footer()
+
+// const header = document.querySelector('header')
+// document.querySelector('body'),addEventListener('scroll',()=>{
+//     header.classList.remove ('position-fixed')
+// })

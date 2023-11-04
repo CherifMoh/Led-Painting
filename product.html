@@ -3,6 +3,7 @@
 <head>
     <link rel="icon" href="assets/logo.jpg">
     <link rel="stylesheet" href="styles/pages/productPage.css">
+    <link rel="stylesheet" href="styles/pages/style.css">
     <link rel="stylesheet" href="styles/shared/cart.css">
     <link rel="stylesheet" href="styles/shared/footer.css">
     <link rel="stylesheet" href="styles/shared/general.css">
@@ -25,7 +26,7 @@
     </div>
     <header>
         <img src="assets/burger.png" class="burger-button">
-        <a href="index.html"><img src="assets/logo.jpg" class="header--logo"></a>
+        <a href="index.html"><img src="assets/logo.png" class="header--logo"></a>
         <div class="side-menu-shadow"></div>
         <div class="side-menu">
             <section class="side-menu--top">
@@ -45,13 +46,19 @@
         </nav>
     </header>
     <main>
-        <section class="main-section"></section> 
-       
+        <section class="main-section">
+            <section class="selected-prodect-container"></section>
+        </section> 
+        
+        <section class="main-container2"> 
+            <div class="product-grid"></div>
+        </section>
+
         <div class="cart-button-container">
             <img class="cart-shopping-bag" src="assets/shopping-bag.png" alt="">
             <span class="cart-button-quntity-number">0</span>
         </div>
-
+        
         <div class="cart-container ">
             <div class="cart-header">
                 <h2 class="cart-header-quntity">Cart • 0</h2>
@@ -60,6 +67,7 @@
             <div class="cart-items"></div>
             <a href="checkout.html"><button class="cart-checkout">Checkout • <span class="checkout-price"></span>DA</button></a>
         </div>
+        
     </main>
     <footer>
         

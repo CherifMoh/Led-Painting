@@ -1,11 +1,22 @@
-main{
+.main-section{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
     padding: 0 50px;
+} 
+
+.main-container2{
+    padding-top: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.product-grid{
+    padding: 0 50px;
+    width: 1200px;
+}
 .selected-prodect-container{
     max-width: 1100px;
     width: auto;
@@ -15,29 +26,37 @@ main{
 
 .product-info{
     margin-left: 50px;
+    padding-right: 50px;
 }
 .spawn-anime{
     animation: slideUp 0.5s ease-out ;
 }
 .product-title{
+    letter-spacing: 1.5px;
     font-size: 52px;
     color: #11151C;
     font-weight: 900;
+    font-family: 'DM Serif Display', serif!important;
 }
 .price-container{
     margin-top: 15px;
+    font-family: 'DM Serif Display', serif!important;
 }
 .price-befor-sale{
+    letter-spacing: 1px;
     font-weight: 400;
     color: #11151c9e;
     text-decoration: line-through;
     margin-right: 8px;
+    font-family: 'DM Serif Display', serif!important;
 }
 .price-after-sale{
+    letter-spacing: 1px;
     font-size: 18px;
     color: #11151C;
     font-weight: 700;
     margin-right: 8px;
+    font-family: 'DM Serif Display', serif!important;
 }
 .sale-mark{
     background-color: #7A04eb;
@@ -50,6 +69,7 @@ main{
     width: 158px;
     border: 1px solid black;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 .quantity-input{
     border: none;
@@ -69,7 +89,7 @@ main{
     cursor: pointer;
 }
 .Add-to-cart{
-    margin-top: 30px;
+    margin-top: 10px;
     width: 100%;
     background-color: transparent;
     border:1px solid rgb(133,88,50) ;
@@ -81,6 +101,10 @@ main{
 }
 .Add-to-cart:hover{
     border-width: 2px;
+}
+.buy-now{
+    color: white;
+    background-color: #7A04eb;
 }
 .main-image{
     width: 100%;
@@ -134,9 +158,65 @@ main{
     width: 110px;
     height: 110px;
 }
+.discription{
+    max-width: 100%;
+    letter-spacing: normal;
+    line-height: 30px;
+    font-size: 16px;
+    color: #11151CBF;
+}
+.drop-header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-top: 1px solid rgb(156, 156, 156);
+    border-bottom: 1px solid rgb(156, 156, 156);
+    padding: 15px 0 ;
+}
+.drop-header2{
+    border-top: none;
+}
+.drop-title{
+    letter-spacing: normal;
+    justify-self: start;
+    margin: 0;
+    font-size: 19.5px;
+}
+.drop-icon{
+    width: 26px;
+    transform: rotateY(200deg);
+    margin-right: 13px;
+}
+.drop-arrow{
+    position: absolute;
+    right: 0px;
+    top: 22px;
+    width: 20px;
+}
+.rotate{
+    transform: rotateX(180deg);
+}
+.drop-dimensions-title,.dimensions{
+    letter-spacing: normal;
+    padding-left: 15px;
+    font-family: 'DM Serif Display', serif!important;
+    font-weight: 500;
+    color: #11151CBF;
+}
+.material{
+    padding-left: 15px;
+}
+.display-none{
+    display: none;
+}
+.display-block{
+    display:block;
+}
+
 @media(max-width: 750px){
-    main{
-        padding: 0 15px;
+    .main-section,.product-grid{
+        padding: 15px;
     }
     .selected-prodect-container{
         grid-template-columns:1fr;
