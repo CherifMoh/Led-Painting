@@ -69,6 +69,12 @@
 .stop-scrolling {
     overflow: hidden;
 }
+.empty-cart{
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 80px;
+}
 .cart-item-container{
     padding: 20px 30px;
     height: 100px;

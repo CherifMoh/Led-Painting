@@ -1,12 +1,7 @@
 import {cart, cartShow} from './cart.js'
+
 import {products} from '../data/products.js'
 
-
-if(localStorage.getItem('reloded')){
-    localStorage.removeItem('reloded')
-    cartShow()
-
-}
 
 const mproduct = JSON.parse(localStorage.getItem('selectedProduct'))
 const html =
@@ -130,7 +125,7 @@ document.querySelector('.minus-quantity-button')
 const AlladdToCart = document.querySelectorAll('.Add-to-cart')
 AlladdToCart.forEach(addToCart=>{
     addToCart.addEventListener('click',()=>{
-
+        // emptyOrFullCart()
         const productId = addToCart.dataset.productId
         let Quantity = quantity.value
         let matchingItem = 0;

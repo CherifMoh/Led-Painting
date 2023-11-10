@@ -2,6 +2,11 @@ import {products} from '../data/products.js'
 
 export let cart = JSON.parse(localStorage.getItem('cart')) || []
 
+if(localStorage.getItem('reloded')){
+    localStorage.removeItem('reloded')
+    cartShow()
+}
+
 products.forEach((product)=>{
     cart.forEach(cartItem => {
         if(cartItem.id === product.id){
@@ -223,12 +228,19 @@ function footer(){
                 </div>
             </div>
         </div>`
-    document.querySelector('footer').innerHTML = footer
+        if(document.querySelector('footer')){
+            document.querySelector('footer').innerHTML = footer
+        }
+        
 }
 setInterval(footer,0)
-// footer()
 
-// const header = document.querySelector('header')
-// document.querySelector('body'),addEventListener('scroll',()=>{
-//     header.classList.remove ('position-fixed')
-// })
+export function emptyOrFullCart(){
+   
+    document.querySelector('.empty-cart').classList.add('display-none')
+    if(cart.length===0){
+        document.querySelector('.cart-checkout').classList.add('display-none')
+        document.querySelector('.empty-cart').classList.remove('display-none')      
+    } 
+}
+emptyOrFullCart()

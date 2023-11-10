@@ -1,5 +1,7 @@
 import {products} from '../data/products.js'
 
+
+
 products.forEach(product => {
     const html = `
     <a href="product.html" class="product-card" data-product-id=${product.id}>
@@ -84,3 +86,4 @@ document.querySelector('.burger-button').addEventListener('click',()=>{
         document.querySelector('body').classList.add('stopescrol')
     }
 })
+

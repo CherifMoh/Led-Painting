@@ -14,12 +14,15 @@
         <img class="cart-shopping-bag" src="assets/shopping-bag.png" alt="">
         <span class="cart-button-quntity-number">0</span>
     </div>
+    
     <div class="cart-container ">
         <div class="cart-header">
             <h2 class="cart-header-quntity">Cart • 0</h2>
             <button class="cart-off">X</button>
         </div>
-        <div class="cart-items"></div>
+        <div class="cart-items">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
         <a href="checkout.html"><button class="cart-checkout">Checkout • <span class="checkout-price"></span>DA</button></a>
     </div>
     <header>
@@ -30,23 +33,76 @@
         <section class="form-section">
             <div class="form-container">
                 <h1>Delivery</h1>
-                <form action="https://script.google.com/macros/s/AKfycbyT5Hbvt4dTaZswrrdqPyJBISB6Uz3R2iD3iRzoR2DXCx5ONd4RK-WFSdU-aDY9bwAR/exec" method="post">
-                    <input placeholder="name" name="name" type="text">
-                    <input placeholder="phone" name="phone" type="text">
-                    <select name="wilaya" class="wilaya" >
+                <form action="https://script.google.com/macros/s/AKfycbx5KHqiTdwZDQXsAPIERz-yDW-9LGSFnc5_4_NzIgcHY_NtJ5ZWkBydAbQ4GpGnpg8/exec" method="post">
+                    <input required class="name"  placeholder="name" name="name" type="text">
+                    <input required class="phone"  placeholder="phone" name="phone" type="text">
+                    <select required class="wilaya"  name="wilaya" class="wilaya" >
                         <option selected hidden >الولاية</option>
-                        <option value="cherif">cherif</option>
-                        <option value="cherif">cherif</option>
+                        <option value="Adrar">	Adrar</option>
+                        <option value="Chlef">Chlef</option>
+                        <option value="Laghouat">	Laghouat</option>
+                        <option value="Oum El Bouaghi">Oum El Bouaghi</option>
+                        <option value="Batna">Batna</option>
+                        <option value="Béjaïa">Béjaïa</option>
+                        <option value="Biskra">Biskra</option>
+                        <option value="Béchar">Béchar</option>
+                        <option value="Blida">Blida</option>
+                        <option value="Bouira">Bouira</option>
+                        <option value="Tamanrasset">Tamanrasset</option>
+                        <option value="Tébessa">Tébessa</option>
+                        <option value="Tlemcen">Tlemcen</option>
+                        <option value="Tiaret">Tiaret</option>
+                        <option value="Tizi Ouzou	">Tizi Ouzou	</option>
+                        <option value="Alger">Alger</option>
+                        <option value="Djelfa">Djelfa</option>
+                        <option value="Jijel">Jijel</option>
+                        <option value="Sétif">Sétif</option>
+                        <option value="Saïda">Saïda</option>
+                        <option value="Skikda">Skikda</option>
+                        <option value="Sidi Bel Abbès">Sidi Bel Abbès</option>
+                        <option value="Annaba">Annaba</option>
+                        <option value="Guelma">Guelma</option>
+                        <option value="Constantine">Constantine</option>
+                        <option value="Médéa">Médéa</option>
+                        <option value="Mostaganem">	Mostaganem</option>
+                        <option value="M'Sila">	M'Sila</option>
+                        <option value="Mascara">	Mascara</option>
+                        <option value="Ouargla">Ouargla</option>
+                        <option value="Oran">	Oran</option>
+                        <option value="El Bayadh	">El Bayadh	</option>
+                        <option value="Illizi">Illizi</option>
+                        <option value="Bordj Bou Arreridj">Bordj Bou Arreridj</option>
+                        <option value="Boumerdès">Boumerdès</option>
+                        <option value="El Tarf">El Tarf</option>
+                        <option value="Tindouf">Tindouf</option>
+                        <option value="Tissemsilt">Tissemsilt</option>
+                        <option value="El Oued">	El Oued</option>
+                        <option value="Khenchela">	Khenchela</option>
+                        <option value="Souk Ahras">	Souk Ahras</option>
+                        <option value="Tipaza">	Tipaza</option>
+                        <option value="Mila">	Mila</option>
+                        <option value="Aïn Defla">	Aïn Defla</option>
+                        <option value="Naâma">Naâma</option>
+                        <option value="Aïn Témouchent">Aïn Témouchent</option>
+                        <option value="Ghardaïa">Ghardaïa</option>
+                        <option value="Relizane">Relizane</option>
+                        <option value="Timimoun">Timimoun</option>
+                        <option value="Ouled Djellal">Ouled Djellal</option>
+                        <option value="Beni Abbes">Beni Abbes</option>
+                        <option value="In Salah">	In Salah</option>
+                        <option value="Touggourt">Touggourt</option>
+                        <option value="El M'Ghair">	El M'Ghair</option>
+                        <option value="El Meniaa">	El Meniaa</option>
                     </select>
-                    <input placeholder="baldia" name="baldia" type="text">
-                    <select name="shippingmethod" class="shippingmethod" >
+                    <input required class="baldia"  placeholder="baldia" name="baldia" type="text">
+                    <select required class="shippingmethod" name="shippingmethod" class="shippingmethod" >
                         <option selected hidden >طريقة التوصيل</option>
                         <option value="بيت">بيت</option>
                         <option value="مكتب">مكتب</option>
                     </select>
                     <div class="hidden-inputs">
                        
-                        <input name="totalPrice" id="totalPrice" type="hidden">
+                        <input required  name="totalPrice" id="totalPrice" type="hidden">
                     </div>
                     
                     <button type="submit" class="submit-button">أطلب الان</button>
@@ -72,7 +128,8 @@
                     <div class="nospasing shipping prcie-c">
                         <div class="nospasing shipping-text">Shipping</div>
                         <div class="nospasing shipping-price">
-                            <span class="nospasing js-shipping-price"></span>DA
+                            <span class="nospasing js-shipping-price">ادخل الولاية و طريقة التوصيل لتحديد السعر</span>
+                            <span class="shipping-da"></span>
                         </div>
                     </div>
     
