@@ -111,12 +111,18 @@
         padding: 50px;
         padding-top: 0;
     }
-    main{
+    .main{
         padding-top: 0;
+    }
+    .header--logo{
+        margin: 0;
     }
 }
 @media (max-width: 750px) {
     .main-container{
         padding: 15px;
+    }
+    .header--logo{
+        margin: 0;
     }
 }
