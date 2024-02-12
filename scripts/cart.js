@@ -159,10 +159,10 @@ function tootalePrice(){
 }
 
 tootalePrice()
-console.log(cartItem.quantity)
 function cartQuantityNumber (){
     let Quantity = 0 ;
     cart.forEach(cartItem=>{
+        console.log(cartItem.quantity)
         Quantity += Number(cartItem.quantity)
     })
     return Quantity
