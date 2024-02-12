@@ -240,7 +240,7 @@ setInterval(footer,0)
 export function emptyOrFullCart(){
    
     if(document.querySelector('.empty-cart'))document.querySelector('.empty-cart').classList.add('display-none')
-    if(cart.length===0){
+    if(cart.length===0 && document.querySelector('.empty-cart')){
         document.querySelector('.cart-checkout').classList.add('display-none')
         document.querySelector('.empty-cart').classList.remove('display-none')      
     } 
