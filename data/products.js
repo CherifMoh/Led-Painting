@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+
 export const products = [
     {
-        id: 'f5a7d872',
+        id: uuidv4(),
         title: 'Starry Encounter',
         salePrice: 2500,
         price: 3000,
@@ -9,7 +11,7 @@ export const products = [
         imageOn:'photo_2023-10-17_14-40-02.jpg',
         imageOff:'photo_2023-10-17_14-40-07.jpg',
     },{
-        id: 'f102dd26',
+        id: uuidv4(),
         title: 'foo',
         salePrice: 2700,
         price: 3000,
@@ -18,7 +20,7 @@ export const products = [
         imageOn:'photo_2023-10-17_14-40-26.jpg',
         imageOff:'photo_2023-10-17_14-40-29.jpg',
     },{
-        id: 'f986bc6a',
+        id: uuidv4(),
         title: 'foo',
         salePrice: 2700,
         price: 3000,
@@ -27,7 +29,7 @@ export const products = [
         imageOn:'photo_2023-10-17_14-40-20.jpg',
         imageOff:'photo_2023-10-17_14-40-24.jpg',
     },{
-        id: 'ffa1dfe4',
+        id: uuidv4(),
         title: 'foo',
         salePrice: 2700,
         price: 3000,
