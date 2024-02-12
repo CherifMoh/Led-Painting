@@ -144,7 +144,9 @@ AlladdToCart.forEach(addToCart=>{
         });
         localStorage.setItem('cart', JSON.stringify(cart))  
         }
-        localStorage.setItem('reloded', 'reloded')
+        if(!addToCart.classList.contains('buy-now')){    
+            localStorage.setItem('reloded', 'reloded')
+        }
         location.reload()        
     })})
 
