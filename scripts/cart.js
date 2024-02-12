@@ -159,6 +159,7 @@ function tootalePrice(){
 }
 
 tootalePrice()
+console.log(cartItem.quantity)
 function cartQuantityNumber (){
     let Quantity = 0 ;
     cart.forEach(cartItem=>{
@@ -238,7 +239,7 @@ setInterval(footer,0)
 
 export function emptyOrFullCart(){
    
-    document.querySelector('.empty-cart').classList.add('display-none')
+    if(document.querySelector('.empty-cart'))document.querySelector('.empty-cart').classList.add('display-none')
     if(cart.length===0){
         document.querySelector('.cart-checkout').classList.add('display-none')
         document.querySelector('.empty-cart').classList.remove('display-none')      
