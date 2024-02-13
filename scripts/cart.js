@@ -2,7 +2,6 @@ import {products} from '../data/products.js'
 
 export let cart = JSON.parse(localStorage.getItem('cart')) || []
 // localStorage.removeItem('cart')
-
 if(localStorage.getItem('reloded')){
     localStorage.removeItem('reloded')
     cartShow()
@@ -10,6 +9,8 @@ if(localStorage.getItem('reloded')){
 
 products.forEach((product)=>{
     cart.forEach(cartItem => {
+        console.log(cartItem.id+'cart')
+        console.log(product.id+'product')
         if(cartItem.id === product.id){
             const html = `
             <div class="cart-item-container">
@@ -234,7 +235,7 @@ function footer(){
         }
         
 }
-setInterval(footer,0)
+setTimeout(footer,0)
 
 export function emptyOrFullCart(){
    
