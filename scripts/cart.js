@@ -9,8 +9,6 @@ if(localStorage.getItem('reloded')){
 
 products.forEach((product)=>{
     cart.forEach(cartItem => {
-        console.log(cartItem.id+'cart')
-        console.log(product.id+'product')
         if(cartItem.id === product.id){
             const html = `
             <div class="cart-item-container">
