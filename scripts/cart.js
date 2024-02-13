@@ -1,7 +1,7 @@
 import {products} from '../data/products.js'
 
 export let cart = JSON.parse(localStorage.getItem('cart')) || []
-localStorage.removeItem('cart')
+// localStorage.removeItem('cart')
 if(localStorage.getItem('reloded')){
     localStorage.removeItem('reloded')
     cartShow()
